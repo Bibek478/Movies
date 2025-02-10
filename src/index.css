@@ -21,10 +21,19 @@
 }
 
 @layer base {
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
   body {
     font-family: "DM Sans", serif;
     font-optical-sizing: auto;
     background: #030014;
+    min-height: 100vh;
   }
 
   h1 {
@@ -40,21 +49,20 @@
   }
 
   header {
-    @apply sm:mt-10 mt-5;
+    @apply mt-2 sm:mt-4;
   }
 
   header img {
-    @apply w-full max-w-lg h-auto object-contain mx-auto drop-shadow-md;
+    @apply w-full max-w-md h-auto object-contain mx-auto drop-shadow-md;
   }
 }
 
 @layer components {
   .pattern {
-    @apply bg-hero-pattern w-screen h-screen bg-center bg-cover absolute z-0;
-  }
+    @apply bg-hero-pattern w-full h-screen bg-center bg-cover absolute z-0;  }
 
   .wrapper {
-    @apply px-5 py-12 xs:p-10 max-w-7xl mx-auto flex flex-col relative z-10;
+    @apply px-0 py-0 xs:p-0 max-w-7xl mx-auto flex flex-col relative z-10;
   }
 
   .trending {
