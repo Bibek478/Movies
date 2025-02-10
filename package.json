@@ -1,6 +1,6 @@
 {
   "name": "first-app",
-  "homepage": "https://your-github-username.github.io/repository-name",
+  "homepage": "https://Bibek478.github.io/Movies",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +8,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.3",
